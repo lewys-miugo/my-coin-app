@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CoinList from "./components/CoinList";
 
-import Dashboard from "./Components/Dashboard";
+import Dashboard from "./components/Dashboard";
 
 
 function App() {
