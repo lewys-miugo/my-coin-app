@@ -1,8 +1,16 @@
 import React from 'react'
+import CoinCard from './CoinCard'
 
-function CoinList () {
+function CoinList (coin){
+    const [coins,setCoin] =useState([]);
+    const [search, setSearch] =useState(['']);
+
+    
+
   return (
-    <div>CoinList</div>
+    <div>
+        <CoinCard coin={coin}/>
+    </div>
   )
 }
 
