@@ -1,17 +1,16 @@
-import React from 'react'
+import React from 'react';
 import CoinCard from './CoinCard'
 
-function CoinList (coin){
-    const [coins,setCoin] =useState([]);
-    const [search, setSearch] =useState(['']);
-
+function CoinList ({coins}){
+    const coinsToDisplay = coins.slice(0, 8);
     
-
   return (
-    <div>
-        <CoinCard coin={coin}/>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+      {coinsToDisplay.map((coin) => (
+        <CoinCard key={coin.id} coin={coin} />
+      ))}
     </div>
-  )
+  );
 }
 
 export default CoinList
