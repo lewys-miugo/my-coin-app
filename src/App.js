@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import CoinList from "./components/CoinList";
 
+import Dashboard from "./Components/Dashboard";
+
+
 function App() {
 
   const [coins ,setCoins] =useState([]);
@@ -16,7 +19,10 @@ function App() {
 
   return (
     <div className="App">
+
       <CoinList coins ={coins}/>
+      <Dashboard />
+
     </div>
   );
 }
