@@ -40,7 +40,7 @@ function TotalCoins(){
 		})
 	}, []);
 
-
+ 
 	return (
 		<div className="bg-black text-green-500 w-1/3 rounded-[10px] mt-[20px] ml-[10px] text-center">
 
@@ -56,7 +56,7 @@ function StaredCoins(){
 	return (
 		<div className="bg-black text-blue-500 w-1/3 rounded-[10px] mt-[20px] text-center">
 
-			<h2>Coins Stared</h2>
+			<h2 className="">Coins Starred</h2>
 
 		</div>
 	)
