@@ -1,11 +1,28 @@
+import { useEffect, useState } from "react";
+import CoinList from "./components/CoinList";
+
 import Dashboard from "./Components/Dashboard";
 
 
 function App() {
+
+  const [coins ,setCoins] =useState([]);
+
+  useEffect(() => {
+    fetch("https://api.coinlore.net/api/tickers/")
+    .then(res => res.json())
+    .then(data =>{ 
+      console.log(data);
+      setCoins(data.data)})
+    .catch (err => console.error("Error fetching coins", err));
+  }, []);
+
   return (
     <div className="App">
-      <h1 className='text-red-500'>My Coin App</h1>
+
+      <CoinList coins ={coins}/>
       <Dashboard />
+
     </div>
   );
 }
