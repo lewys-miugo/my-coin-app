@@ -1,4 +1,4 @@
-import { data } from "autoprefixer"
+// import { data } from "autoprefixer"
 import { useEffect,useState } from "react"
 
 const URL = "https://api.coinlore.net/api/tickers/"
