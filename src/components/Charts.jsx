@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 import { data } from "autoprefixer";
-import { AreaChart, Area, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
+import { AreaChart, Area, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from "recharts";
 import { type } from "@testing-library/user-event/dist/type";
 
 function Chart(){
@@ -25,8 +25,10 @@ function Chart(){
 
 				<AreaChart width={400} height={400} data={products}>
 
-					<XAxis></XAxis>
-					<YAxis></YAxis>
+					<XAxis dataKey={"name"}/>
+					<YAxis />
+					<Tooltip></Tooltip>
+					<Legend></Legend>
 					<CartesianGrid></CartesianGrid>
 
 					
