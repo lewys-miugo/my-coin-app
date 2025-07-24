@@ -10,14 +10,14 @@ function Dashboard (){
 
 	return (
 
-		<div className="bg-gray-800 h-[100vh]">
+		<div className="bg-gray-800 h-[110vh]">
 
 			<div className="flex justify-between gap-[1vw] h-[40vh]">
 				<TotalCoins />
 				<StaredCoins />
 				<CreatedCoins />
 			</div>
-			<Chart />
+			<Chart/>
 
 
 		</div>

@@ -20,19 +20,43 @@ function Chart(){
 
 	return (
 
-		<div className="h-[60vh] w-[500px]">
+		<div className="h-[60vh] w-[1000px] mt-[30px]">
 			<ResponsiveContainer width="100%" height="100%">
 
-				<AreaChart width={500} height={400} data={products}>
+				<AreaChart width={400} height={400} data={products}>
 
 					<XAxis></XAxis>
 					<YAxis></YAxis>
 					<CartesianGrid></CartesianGrid>
+
 					
-					
-					<Area dataKey="percent_change_24h" type="monotone" stroke="green" fill="transparent"></Area>
-					<Area dataKey="percent_change_1h" type="monotone" stroke="blue" fill="transparent"></Area>
-					<Area dataKey="percent_change_7d" type="monotone" stroke="red" fill="transparent"></Area>
+					<Area 
+						dataKey="percent_change_24h"
+						type="monotone" 
+						stroke="green"
+						fill="transparent"
+						stackId="1"
+						>
+
+					</Area>
+					<Area 
+						dataKey="percent_change_1h" 
+						type="monotone" 
+						stroke="blue" 
+						fill="transparent"
+						stackId="1"
+						>
+
+					</Area>
+					<Area 
+						dataKey="percent_change_7d" 
+						type="monotone" 
+						stroke="red" 
+						fill="transparent"
+						stackId="1"
+						>
+
+					</Area>
 			
 			
 				</AreaChart>
