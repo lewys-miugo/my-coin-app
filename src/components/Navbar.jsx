@@ -26,12 +26,12 @@ export default function Navbar() {
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="/login" className="text-gray-700 hover:text-blue-600">Log In</a>
+          <a href="#dashboard" className="text-gray-700 hover:text-blue-600">Dashboard</a>
           <a
-            href="/signup"
+            href="#create-coin"
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-md transition-all"
           >
-            Sign Up
+            Create Coin
           </a>
         </div>
 
@@ -54,12 +54,12 @@ export default function Navbar() {
           <a href="#faq" className="block">FAQ</a>
           <a href="#blog" className="block">Blog</a>
           <div className="border-t pt-4 space-y-2">
-            <a href="/login" className="block">Log In</a>
+            <a href="#dashboard" className="block">Dashboard</a>
             <a
-              href="/signup"
+              href="#create-coin"
               className="block bg-blue-600 hover:bg-blue-700 text-white text-center px-4 py-2 rounded-full"
             >
-              Sign Up
+              Create Coin
             </a>
           </div>
         </div>
