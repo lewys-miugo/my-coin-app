@@ -4,8 +4,8 @@ import CoinList from "./components/CoinList";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 import OthersParent from "./others/OthersParent";
+import Hero from "./others/Hero";
 
 // Optional: You can create separate pages or sections for each
 // but here we'll just use sections with IDs to match navbar links.
@@ -26,7 +26,7 @@ export default function App() {
     <div className="font-sans text-gray-800">
       {/* Top Navigation */}
       <Navbar />
-        
+        <Hero />
       
       {/* Coin List Section */}
       <CoinList coins={coins}/>
