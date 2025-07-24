@@ -1,4 +1,7 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import CoinList from "./components/CoinList";
+import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -6,11 +9,24 @@ import Footer from "./components/Footer";
 // but here we'll just use sections with IDs to match navbar links.
 
 export default function App() {
+  const [coins ,setCoins] =useState([]);
+
+  useEffect(() => {
+    fetch("https://api.coinlore.net/api/tickers/")
+    .then(res => res.json())
+    .then(data =>{ 
+      console.log(data);
+      setCoins(data.data)})
+    .catch (err => console.error("Error fetching coins", err));
+  }, []);
+  
   return (
     <div className="font-sans text-gray-800">
       {/* Top Navigation */}
       <Navbar />
-
+      <CoinList coins ={coins}/>
+      <Dashboard />
+        
       {/* Hero Section */}
       <section
         id="home"
