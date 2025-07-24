@@ -49,7 +49,7 @@ function TotalCoins(){
 		<div className="bg-black text-green-500 w-1/3 rounded-[10px] mt-[20px] ml-[10px] text-center">
 
 			<h2 className="">Total Number of coins</h2>
-			<p className="text-[200px] font-bold">
+			<p className="text-[200px] font-bold cursor-default">
 				{coins.length}
 			</p>
 		</div>
@@ -76,7 +76,7 @@ function StarredCoins(){
 		<div className="bg-black text-blue-500 w-1/3 rounded-[10px] mt-[20px] text-center">
 
 			<h2 className="">Coins Starred</h2>
-			<p className="text-[200px] font-bold">
+			<p className="text-[200px] font-bold cursor-default">
 				{starred.length}
 			</p>
 
@@ -106,7 +106,7 @@ function CreatedCoins(){
 		<div className="bg-black text-red-500 w-1/3 rounded-[10px] mt-[20px] mr-[10px] text-center">
 
 			<h2>Coins Created</h2>
-			<p className="text-[200px] font-bold">
+			<p className="text-[200px] font-bold cursor-default">
 				{created.length}
 			</p>
 
