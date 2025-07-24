@@ -26,7 +26,13 @@ export default function Navbar() {
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="#dashboard" className="text-gray-700 hover:text-blue-600">Dashboard</a>
+          <Link
+            to="/dashboard"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-md transition-all"
+          >
+            Dashboard
+          </Link>
+          {/* <a href="#dashboard" className="text-gray-700 hover:text-blue-600">Dashboard</a> */}
           <Link
             to="/create-coin"
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-md transition-all"
