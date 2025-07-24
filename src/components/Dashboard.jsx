@@ -60,6 +60,14 @@ function StarredCoins(){
 	const [starred, setStarred] = useState([])
 
 	useEffect(()=>{
+		fetch("http://localhost:3001/starred")
+		.then(res=>res.json())
+		.then (data=>{
+			setStarred(data)
+		})
+		.catch(error=>{
+			console.error("error")
+		})
 
 	},[])
 
@@ -68,6 +76,10 @@ function StarredCoins(){
 		<div className="bg-black text-blue-500 w-1/3 rounded-[10px] mt-[20px] text-center">
 
 			<h2 className="">Coins Starred</h2>
+			<p className="text-[200px] font-bold">
+				{starred.length}
+			</p>
+
 
 		</div>
 	)
