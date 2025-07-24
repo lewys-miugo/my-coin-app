@@ -7,9 +7,6 @@ import Footer from "./components/Footer";
 import OthersParent from "./others/OthersParent";
 import Hero from "./others/Hero";
 
-// Optional: You can create separate pages or sections for each
-// but here we'll just use sections with IDs to match navbar links.
-
 export default function App() {
   const [coins ,setCoins] =useState([]);
 
