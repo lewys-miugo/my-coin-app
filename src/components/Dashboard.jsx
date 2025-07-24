@@ -14,7 +14,7 @@ function Dashboard (){
 
 			<div className="flex justify-between gap-[1vw] h-[40vh]">
 				<TotalCoins />
-				<StaredCoins />
+				<StarredCoins />
 				<CreatedCoins />
 			</div>
 			<Chart/>
@@ -55,7 +55,14 @@ function TotalCoins(){
 	)
 }
 
-function StaredCoins(){
+function StarredCoins(){
+	const [starred, setStarred] = useState([])
+
+	useEffect(()=>{
+
+	},[])
+
+
 	return (
 		<div className="bg-black text-blue-500 w-1/3 rounded-[10px] mt-[20px] text-center">
 
@@ -66,6 +73,14 @@ function StaredCoins(){
 }
 
 function CreatedCoins(){
+	const [created, setCreated] = useState([])
+
+	useEffect(()=>{
+
+	},[])
+
+
+
 	return (
 		<div className="bg-black text-red-500 w-1/3 rounded-[10px] mt-[20px] mr-[10px] text-center">
 

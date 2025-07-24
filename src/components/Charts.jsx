@@ -20,7 +20,7 @@ function Chart(){
 
 	return (
 
-		<div className="h-[60vh] w-[1000px] mt-[30px]">
+		<div className="h-[60vh] w-[1000px] mx-auto mt-[30px]">
 			<ResponsiveContainer width="100%" height="100%">
 
 				<AreaChart width={400} height={400} data={products}>
@@ -29,7 +29,7 @@ function Chart(){
 					<YAxis />
 					<Tooltip></Tooltip>
 					<Legend></Legend>
-					<CartesianGrid></CartesianGrid>
+					<CartesianGrid strokeDasharray="3 3"/>
 
 					
 					<Area 
