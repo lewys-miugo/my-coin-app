@@ -1,0 +1,115 @@
+{
+  "coins": [
+    {
+      "id": "1753358591804",
+      "name": "luwis",
+      "symbol": "LWT",
+      "price_usd": 53404,
+      "percent_change_1h": 3,
+      "percent_change_24h": 5,
+      "percent_change_7d": 6.8,
+      "market_cap_usd": 7824283623729,
+      "rank": 2
+    },
+    {
+      "id": "1753358591808",
+      "name": "Isaac",
+      "symbol": "IO",
+      "price_usd": 873404,
+      "percent_change_1h": 2.1,
+      "percent_change_24h": 3.3,
+      "percent_change_7d": 4.8,
+      "market_cap_usd": 29482472844729,
+      "rank": 1
+    },
+    {
+      "id": "1753358591808",
+      "name": "Isaac",
+      "symbol": "IO",
+      "price_usd": 873404,
+      "percent_change_1h": 2.1,
+      "percent_change_24h": 3.3,
+      "percent_change_7d": 4.8,
+      "market_cap_usd": 29482472844729,
+      "rank": 1
+    },
+    {
+      "id": "1753358591808",
+      "name": "Isaac",
+      "symbol": "IO",
+      "price_usd": 873404,
+      "percent_change_1h": 2.1,
+      "percent_change_24h": 3.3,
+      "percent_change_7d": 4.8,
+      "market_cap_usd": 29482472844729,
+      "rank": 1
+    },
+    {
+      "id": "1753358591808",
+      "name": "Isaac",
+      "symbol": "IO",
+      "price_usd": 873404,
+      "percent_change_1h": 2.1,
+      "percent_change_24h": 3.3,
+      "percent_change_7d": 4.8,
+      "market_cap_usd": 29482472844729,
+      "rank": 1
+    },
+    {
+      "id": "1753358591808",
+      "name": "Isaac",
+      "symbol": "IO",
+      "price_usd": 873404,
+      "percent_change_1h": 2.1,
+      "percent_change_24h": 3.3,
+      "percent_change_7d": 4.8,
+      "market_cap_usd": 29482472844729,
+      "rank": 1
+    },
+    {
+      "id": "1753358591808",
+      "name": "Isaac",
+      "symbol": "IO",
+      "price_usd": 873404,
+      "percent_change_1h": 2.1,
+      "percent_change_24h": 3.3,
+      "percent_change_7d": 4.8,
+      "market_cap_usd": 29482472844729,
+      "rank": 1
+    },
+    {
+      "id": "1753358591808",
+      "name": "Isaac",
+      "symbol": "IO",
+      "price_usd": 873404,
+      "percent_change_1h": 2.1,
+      "percent_change_24h": 3.3,
+      "percent_change_7d": 4.8,
+      "market_cap_usd": 29482472844729,
+      "rank": 1
+    },
+    {
+      "id": "1753358591808",
+      "name": "Isaac",
+      "symbol": "IO",
+      "price_usd": 873404,
+      "percent_change_1h": 2.1,
+      "percent_change_24h": 3.3,
+      "percent_change_7d": 4.8,
+      "market_cap_usd": 29482472844729,
+      "rank": 1
+    },
+    {
+      "id": "1753358591808",
+      "name": "Isaac",
+      "symbol": "IO",
+      "price_usd": 873404,
+      "percent_change_1h": 2.1,
+      "percent_change_24h": 3.3,
+      "percent_change_7d": 4.8,
+      "market_cap_usd": 29482472844729,
+      "rank": 1
+    }
+  ],
+  "starred": []
+}
