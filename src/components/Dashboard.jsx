@@ -3,7 +3,9 @@ import Chart from "./Charts"
 
 
 
+
 const URL = "https://api.coinlore.net/api/tickers/"
+
 
 function Dashboard (){
 
@@ -75,6 +77,14 @@ function CreatedCoins(){
 	const [created, setCreated] = useState([])
 
 	useEffect(()=>{
+		fetch("http://localhost:3001/coins")
+		.then(res=>res.json())
+		.then (data=>{
+			setCreated(data)
+		})
+		.catch(error=>{
+			console.error("error")
+		})
 
 	},[])
 
@@ -84,6 +94,9 @@ function CreatedCoins(){
 		<div className="bg-black text-red-500 w-1/3 rounded-[10px] mt-[20px] mr-[10px] text-center">
 
 			<h2>Coins Created</h2>
+			<p className="text-[200px] font-bold">
+				{created.length}
+			</p>
 
 		</div>
 	)
