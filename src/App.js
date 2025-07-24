@@ -24,8 +24,6 @@ export default function App() {
     <div className="font-sans text-gray-800">
       {/* Top Navigation */}
       <Navbar />
-      <CoinList coins ={coins}/>
-      <Dashboard />
         
       {/* Hero Section */}
       <section
@@ -48,6 +46,14 @@ export default function App() {
             Get Started
           </button>
         </form>
+      </section>
+
+      {/* Coin List Section */}
+      <CoinList coins={coins}/>
+      
+      {/* Dashboard Section */}
+      <section id="dashboard">
+        <Dashboard />
       </section>
 
       {/* About Us */}
