@@ -131,7 +131,80 @@
       "percent_change_7d": 434,
       "market_cap_usd": 434532322,
       "rank": 143
+    },
+    {
+      "id": "1753633759294",
+      "name": "Ben",
+      "symbol": "BNT",
+      "price_usd": 500,
+      "total_supply": 10000,
+      "market_cap_usd": 5000000,
+      "rank": 13,
+      "percent_change_1h": 0,
+      "percent_change_24h": 0,
+      "percent_change_7d": 0
     }
   ],
-  "starred": []
+  "starred": [
+    {
+      "id": "2710",
+      "symbol": "BNB",
+      "name": "Binance Coin",
+      "nameid": "binance-coin",
+      "rank": 5,
+      "price_usd": "825.59",
+      "percent_change_24h": "5.70",
+      "percent_change_1h": "3.33",
+      "percent_change_7d": "11.01",
+      "price_btc": "0.006922",
+      "market_cap_usd": "114994847582.60",
+      "volume24": 1365545863.4354403,
+      "volume24a": 938589281.0583653,
+      "csupply": "139288751.44",
+      "tsupply": "139288751.44",
+      "msupply": "200000000"
+    },
+    {
+      "id": "90",
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "nameid": "bitcoin",
+      "rank": 1,
+      "price_usd": "119293.45",
+      "percent_change_24h": "0.96",
+      "percent_change_1h": "0.66",
+      "percent_change_7d": "1.04",
+      "price_btc": "1.00",
+      "market_cap_usd": "2373598802624.00",
+      "volume24": 23769692026.84717,
+      "volume24a": 27704181075.961952,
+      "csupply": "19897143.00",
+      "tsupply": "19897143",
+      "msupply": "21000000"
+    },
+    {
+      "id": "1753633759294",
+      "name": "Ben",
+      "symbol": "BNT",
+      "price_usd": 500,
+      "total_supply": 10000,
+      "market_cap_usd": 5000000,
+      "rank": 13,
+      "percent_change_1h": 0,
+      "percent_change_24h": 0,
+      "percent_change_7d": 0
+    },
+    {
+      "id": "1753358591804",
+      "name": "luwis",
+      "symbol": "LWT",
+      "price_usd": 53404,
+      "percent_change_1h": 3,
+      "percent_change_24h": 5,
+      "percent_change_7d": 6.8,
+      "market_cap_usd": 7824283623729,
+      "rank": 2,
+      "dateStarred": "2025-07-27T17:13:12.992Z"
+    }
+  ]
 }

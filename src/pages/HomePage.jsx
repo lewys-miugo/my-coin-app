@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import CoinList from "../components/CoinList";
-import Dashboard from "../components/Dashboard";
+import CreatedCoins from "../components/CreatedCoins";
+import StarredCoins from "../components/StarredCoins";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import OthersParent from "../others/OthersParent";
@@ -9,32 +10,25 @@ import Hero from "../others/Hero";
 
 export default function HomePage() {
   const [coins, setCoins] = useState([]);
-  const [createdCoins, setCreatedCoins] = useState([]);
 
   useEffect(() => {
     fetch("https://api.coinlore.net/api/tickers/")
       .then(res => res.json())
       .then(data => { 
         console.log(data);
-        setCoins(data.data)
+        setCoins(data.data || [])
       })
       .catch(err => console.error("Error fetching coins", err));
   }, []);
   
   return (
     <>
-      {/* Top Navigation */}
       <Navbar />
       <Hero />
-      
-      {/* Coin List Section */}
       <CoinList coins={coins}/>
-      {/* <CoinList createdCoins={createdCoins}/> */}
-      
-      
+      <CreatedCoins />
+      <StarredCoins />
       <OthersParent />
-
-      {/* Footer */}
       <Footer />
     </>
   );

@@ -5,11 +5,7 @@ function CreateCoin() {
     name: '',
     symbol: '',
     price_usd: '',
-    percent_change_1h: '',
-    percent_change_24h: '',
-    percent_change_7d: '',
-    market_cap_usd: '',
-    rank: ''
+    total_supply: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,21 +19,38 @@ function CreateCoin() {
     }));
   };
 
+  const generateRandomData = () => {
+    return {
+      percent_change_1h: (Math.random() * 10 - 5).toFixed(2), // -5% to +5%
+      percent_change_24h: (Math.random() * 20 - 10).toFixed(2), // -10% to +10%
+      percent_change_7d: (Math.random() * 50 - 25).toFixed(2), // -25% to +25%
+    };
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setMessage('');
 
     try {
+      // Check if symbol already exists
+      const existingCoins = await fetch('http://localhost:3001/coins');
+      const coins = await existingCoins.json();
+      
+      if (coins.some(coin => coin.symbol.toLowerCase() === formData.symbol.toLowerCase())) {
+        setMessage('Error: Symbol already exists. Please choose a unique symbol.');
+        setIsSubmitting(false);
+        return;
+      }
+
       const newCoin = {
         ...formData,
-        id: Date.now().toString(), // Simple ID generation
+        id: Date.now().toString(),
         price_usd: parseFloat(formData.price_usd),
-        percent_change_1h: parseFloat(formData.percent_change_1h),
-        percent_change_24h: parseFloat(formData.percent_change_24h),
-        percent_change_7d: parseFloat(formData.percent_change_7d),
-        market_cap_usd: parseFloat(formData.market_cap_usd),
-        rank: parseInt(formData.rank)
+        total_supply: parseFloat(formData.total_supply),
+        market_cap_usd: parseFloat(formData.price_usd) * parseFloat(formData.total_supply),
+        rank: coins.length + 1,
+        ...generateRandomData()
       };
 
       const response = await fetch('http://localhost:3001/coins', {
@@ -54,11 +67,7 @@ function CreateCoin() {
           name: '',
           symbol: '',
           price_usd: '',
-          percent_change_1h: '',
-          percent_change_24h: '',
-          percent_change_7d: '',
-          market_cap_usd: '',
-          rank: ''
+          total_supply: ''
         });
       } else {
         setMessage('Error creating coin. Please try again.');
@@ -83,7 +92,7 @@ function CreateCoin() {
         </div>
 
         <form onSubmit={handleSubmit} className="bg-gray-50 rounded-lg p-8 shadow-md">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Coin Name *
@@ -101,7 +110,7 @@ function CreateCoin() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Symbol *
+                Symbol * (Must be unique)
               </label>
               <input
                 type="text"
@@ -111,6 +120,7 @@ function CreateCoin() {
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="e.g., BTC"
+                maxLength="10"
               />
             </div>
 
@@ -125,6 +135,7 @@ function CreateCoin() {
                 value={formData.price_usd}
                 onChange={handleChange}
                 required
+                min="0"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="e.g., 45000.50"
               />
@@ -132,75 +143,17 @@ function CreateCoin() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Rank *
+                Total Supply *
               </label>
               <input
                 type="number"
-                name="rank"
-                value={formData.rank}
+                name="total_supply"
+                value={formData.total_supply}
                 onChange={handleChange}
                 required
+                min="1"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="e.g., 1"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                1h Change (%)
-              </label>
-              <input
-                type="number"
-                step="0.01"
-                name="percent_change_1h"
-                value={formData.percent_change_1h}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="e.g., 2.5"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                24h Change (%)
-              </label>
-              <input
-                type="number"
-                step="0.01"
-                name="percent_change_24h"
-                value={formData.percent_change_24h}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="e.g., -1.2"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                7d Change (%)
-              </label>
-              <input
-                type="number"
-                step="0.01"
-                name="percent_change_7d"
-                value={formData.percent_change_7d}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="e.g., 5.8"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Market Cap (USD)
-              </label>
-              <input
-                type="number"
-                name="market_cap_usd"
-                value={formData.market_cap_usd}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="e.g., 850000000000"
+                placeholder="e.g., 21000000"
               />
             </div>
           </div>

@@ -15,24 +15,15 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8 font-medium text-gray-700">
-          <a href="#about" className="hover:text-blue-600">About Us</a>
-          <a href="#platform" className="hover:text-blue-600">Platform</a>
-          <a href="#pricing" className="hover:text-blue-600">Pricing</a>
-          <a href="#support" className="hover:text-blue-600">Support</a>
-          <a href="#faq" className="hover:text-blue-600">FAQ</a>
-          <a href="#blog" className="hover:text-blue-600">Blog</a>
+        <div className="hidden md:flex items-center space-x-6 font-medium text-gray-700">
+          <Link to="/all-coins" className="hover:text-blue-600">All Coins</Link>
+          <Link to="/starred-coins" className="hover:text-blue-600">Starred</Link>
+          <Link to="/created-coins" className="hover:text-blue-600">Created</Link>
+          <Link to="/dashboard" className="hover:text-blue-600">Dashboard</Link>
         </div>
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <Link
-            to="/dashboard"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-md transition-all"
-          >
-            Dashboard
-          </Link>
-          {/* <a href="#dashboard" className="text-gray-700 hover:text-blue-600">Dashboard</a> */}
           <Link
             to="/create-coin"
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-md transition-all"
@@ -53,14 +44,11 @@ export default function Navbar() {
       {/* Mobile menu dropdown */}
       {open && (
         <div className="md:hidden bg-white shadow-inner px-6 py-4 space-y-4 font-medium text-gray-700">
-          <a href="#about" className="block">About Us</a>
-          <a href="#platform" className="block">Platform</a>
-          <a href="#pricing" className="block">Pricing</a>
-          <a href="#support" className="block">Support</a>
-          <a href="#faq" className="block">FAQ</a>
-          <a href="#blog" className="block">Blog</a>
-          <div className="border-t pt-4 space-y-2">
-            <a href="#dashboard" className="block">Dashboard</a>
+          <Link to="/all-coins" className="block">All Coins</Link>
+          <Link to="/starred-coins" className="block">Starred Coins</Link>
+          <Link to="/created-coins" className="block">Created Coins</Link>
+          <Link to="/dashboard" className="block">Dashboard</Link>
+          <div className="border-t pt-4">
             <Link
               to="/create-coin"
               className="block bg-blue-600 hover:bg-blue-700 text-white text-center px-4 py-2 rounded-full"
