@@ -31,11 +31,7 @@ export default function HomePage() {
       <CoinList coins={coins}/>
       {/* <CoinList createdCoins={createdCoins}/> */}
       
-      {/* Dashboard Section */}
-      <section id="dashboard">
-        <Dashboard />
-      </section>
-
+      
       <OthersParent />
 
       {/* Footer */}

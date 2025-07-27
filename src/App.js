@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CreateCoinPage from "./pages/CreateCoinPage";
+import DashboardPage from "./pages/DashboardPage";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/create-coin" element={<CreateCoinPage />} />
+          <Route path="/dashboard" element={<DashboardPage/>} />
         </Routes>
       </div>
     </Router>
