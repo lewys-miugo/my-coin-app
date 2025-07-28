@@ -18,10 +18,6 @@ function CoinCard ({coin, showStar = true}) {
     return `$${value.toLocaleString()}`;
   };
 
-  useEffect(() => {
-    checkIfStarred();
-  }, [coin.id]);
-
   const checkIfStarred = async () => {
     try {
       const response = await fetch('http://localhost:3001/starred');
@@ -31,6 +27,10 @@ function CoinCard ({coin, showStar = true}) {
       console.error('Error checking starred status:', error);
     }
   };
+
+  useEffect(() => {
+    checkIfStarred();
+  }, [coin.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const toggleStar = async () => {
     try {

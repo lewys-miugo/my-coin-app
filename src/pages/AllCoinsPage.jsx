@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Filter } from 'lucide-react';
+import { Search } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CoinCard from '../components/CoinCard';
@@ -18,7 +18,7 @@ export default function AllCoinsPage() {
 
   useEffect(() => {
     filterAndSortCoins();
-  }, [coins, searchTerm, sortBy, filterBy]);
+  }, [coins, searchTerm, sortBy, filterBy]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCoins = async () => {
     try {

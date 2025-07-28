@@ -18,7 +18,7 @@ export default function CreatedCoinsPage() {
 
   useEffect(() => {
     filterAndSortCoins();
-  }, [createdCoins, searchTerm, sortBy]);
+  }, [createdCoins, searchTerm, sortBy]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCreatedCoins = async () => {
     try {
