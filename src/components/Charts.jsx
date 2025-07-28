@@ -1,9 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
-
-import { data } from "autoprefixer";
 import { AreaChart, Area, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from "recharts";
-import { type } from "@testing-library/user-event/dist/type";
 
 function Chart(){
 	const [products, setProducts] = useState([])
