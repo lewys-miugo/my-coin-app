@@ -17,7 +17,7 @@ export default function StarredCoinsPage() {
 
   useEffect(() => {
     filterAndSortCoins();
-  }, [starredCoins, searchTerm, sortBy]);
+  }, [starredCoins, searchTerm, sortBy]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchStarredCoins = async () => {
     try {
