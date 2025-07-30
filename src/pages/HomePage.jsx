@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import CoinList from "../components/CoinList";
-import Dashboard from "../components/Dashboard";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import OthersParent from "../others/OthersParent";
@@ -9,7 +8,7 @@ import Hero from "../others/Hero";
 
 export default function HomePage() {
   const [coins, setCoins] = useState([]);
-  const [createdCoins, setCreatedCoins] = useState([]);
+  
 
   useEffect(() => {
     fetch("https://api.coinlore.net/api/tickers/")
