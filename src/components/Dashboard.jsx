@@ -60,7 +60,7 @@ function StarredCoins(){
 	const [starred, setStarred] = useState([])
 
 	useEffect(()=>{
-		fetch("http://localhost:3001/starred")
+		fetch("https://my-json-server.typicode.com/lewys-miugo/my-coin-app/starred")
 		.then(res=>res.json())
 		.then (data=>{
 			setStarred(data)
@@ -89,7 +89,7 @@ function CreatedCoins(){
 	const [created, setCreated] = useState([])
 
 	useEffect(()=>{
-		fetch("http://localhost:3001/coins")
+		fetch("https://my-json-server.typicode.com/lewys-miugo/my-coin-app/coins")
 		.then(res=>res.json())
 		.then (data=>{
 			setCreated(data)
