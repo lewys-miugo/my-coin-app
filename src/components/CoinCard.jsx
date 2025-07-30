@@ -20,7 +20,7 @@ function CoinCard ({coin, showStar = true}) {
 
   const checkIfStarred = async () => {
     try {
-      const response = await fetch('http://localhost:3001/starred');
+      const response = await fetch('https://my-json-server.typicode.com/lewys-miugo/my-coin-app/starred');
       const starredCoins = await response.json();
       setIsStarred(starredCoins.some(starredCoin => starredCoin.id === coin.id));
     } catch (error) {
@@ -36,7 +36,7 @@ function CoinCard ({coin, showStar = true}) {
     try {
       if (isStarred) {
         // Remove from starred
-        const response = await fetch('http://localhost:3001/starred', {
+        const response = await fetch('https://my-json-server.typicode.com/lewys-miugo/my-coin-app/starred', {
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
@@ -46,7 +46,7 @@ function CoinCard ({coin, showStar = true}) {
         const coinToRemove = starredCoins.find(starredCoin => starredCoin.id === coin.id);
         
         if (coinToRemove) {
-          await fetch(`http://localhost:3001/starred/${coinToRemove.id}`, {
+          await fetch(`https://my-json-server.typicode.com/lewys-miugo/my-coin-app/starred/${coinToRemove.id}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ function CoinCard ({coin, showStar = true}) {
         setIsStarred(false);
       } else {
         // Add to starred with timestamp
-        await fetch('http://localhost:3001/starred', {
+        await fetch('https://my-json-server.typicode.com/lewys-miugo/my-coin-app/starred', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

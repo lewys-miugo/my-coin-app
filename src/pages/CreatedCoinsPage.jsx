@@ -22,7 +22,7 @@ export default function CreatedCoinsPage() {
 
   const fetchCreatedCoins = async () => {
     try {
-      const response = await fetch('http://localhost:3001/coins', {
+      const response = await fetch('https://my-json-server.typicode.com/lewys-miugo/my-coin-app/coins', {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
@@ -65,7 +65,7 @@ export default function CreatedCoinsPage() {
   const deleteCoin = async (coinId) => {
     if (window.confirm('Are you sure you want to delete this coin?')) {
       try {
-        await fetch(`http://localhost:3001/coins/${coinId}`, {
+        await fetch(`https://my-json-server.typicode.com/lewys-miugo/my-coin-app/coins/${coinId}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
