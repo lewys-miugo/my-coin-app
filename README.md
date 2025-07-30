@@ -2,6 +2,8 @@
 
 A real-time cryptocurrency monitoring dashboard that tracks price volatility using data from the Coinlore API, featuring user-defined coin simulations and watchlist functionality.
 
+🌐 **Live Demo:** [https://mycoins-app.netlify.app](https://mycoins-app.netlify.app)
+
 ## ✨ Features
 
 - 📡 Real-time crypto data from Coinlore API
@@ -17,6 +19,7 @@ A real-time cryptocurrency monitoring dashboard that tracks price volatility usi
 - **API:** Coinlore API
 - **Storage:** LocalStorage, JSON Server
 - **Testing:** Jest, React Testing Library
+- **Deployment:** Netlify
 
 ## 🚀 Getting Started
 
@@ -49,6 +52,12 @@ A real-time cryptocurrency monitoring dashboard that tracks price volatility usi
    ```
 
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## 🌐 Live Demo
+
+Visit the live application at: **[https://mycoins-app.netlify.app](https://mycoins-app.netlify.app)**
+
+*Note: The live demo uses localStorage for data persistence since JSON Server is not available in the production environment.*
 
 ## 📋 Available Scripts
 
