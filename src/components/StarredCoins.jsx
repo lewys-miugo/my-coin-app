@@ -11,7 +11,7 @@ function StarredCoins() {
 
   const fetchStarredCoins = async () => {
     try {
-      const response = await fetch('http://localhost:3001/starred');
+      const response = await fetch('https://my-json-server.typicode.com/lewys-miugo/my-coin-app/starred');
       const data = await response.json();
       setStarredCoins(data || []);
     } catch (error) {

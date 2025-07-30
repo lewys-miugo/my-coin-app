@@ -11,7 +11,7 @@ function CreatedCoins() {
 
   const fetchCreatedCoins = async () => {
     try {
-      const response = await fetch('http://localhost:3001/coins');
+      const response = await fetch('https://my-json-server.typicode.com/lewys-miugo/my-coin-app/coins');
       const data = await response.json();
       setCreatedCoins(data || []);
     } catch (error) {
